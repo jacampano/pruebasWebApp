@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+#app: TUNAME-APP sacado delfichero del yaml de plantilla deploy.
+    app: pruebaswebapp 
+  name: pruebaswebapp-svc
+  namespace: cadenaunica
+spec:
+  ports:
+#port: puerto que publica el servicio de kubernetes
+  - port: 443
+    protocol: TCP
+# targetPort: Puerto a donde le va a indicar las peticiones(debe coincidir con el port del fichero yaml de plantilla-deploy.yaml)
+    targetPort: 8080
+  selector:
+#app: Tiene que coincidir con el nombre de la app TUNAME-APP definida en el yaml de plantilla deploy.
+    app: pruebaswebapp
+  sessionAffinity: None
+  type: ClusterIP
+---

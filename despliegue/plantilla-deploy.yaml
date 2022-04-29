@@ -1,0 +1,81 @@
+﻿apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    #app: Crea una etiqueta al objeto statefulset.
+    app: pruebaswebapp
+  #name: este hace referencia al nombre del objeto statefulset
+  name: pruebaswebapp
+  #namespace: nombre del namespace proporcionado por Servicio Producción.
+  namespace: cadenaunica
+spec:
+  podManagementPolicy: Parallel
+  #replicas: número de replicas deseadas.
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pruebaswebapp
+  #serviceName: Esto hace referencia al nombre del servicio, especificado en el otro fichero de plantilla de servicio
+  serviceName: pruebaswebapp-svc
+  template:
+    metadata:
+      labels:
+        app: pruebaswebapp
+    spec:
+      containers:
+        # Imagen con la que se haya subido a Harbor
+        - image: harbor.chie.junta-andalucia.es/cadenaunica/pruebaswebapp:latest
+          imagePullPolicy: IfNotPresent
+          name: pruebaswebapp
+          ports:
+            # containerPort: Puerto que publica el contenedor
+            - containerPort: 8080
+              protocol: TCP
+          # readinessProbe: Sonda para detectar la salud del pod, evitando que se le envíen peticiones
+          readinessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 90
+            periodSeconds: 10
+            successThreshold: 1
+            tcpSocket:
+              port: 8080
+            timeoutSeconds: 1
+          # livenessProbe: sonda para detectar la salud del pod, en caso de mal funcionamiento reinicia el contenedor que tiene el problema
+          livenessProbe:
+            httpGet:
+              path: /pruebasWebApp
+              port: 8080
+            initialDelaySeconds: 100
+            periodSeconds: 5
+            timeoutSeconds: 20
+          # resources: limites de inicio y maximo con los que nuestro pod levanta.
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1Gi
+            requests:
+              cpu: 200m
+              memory: 300Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          env:
+            - name: CONFIGMAP
+              valueFrom:
+                configMapKeyRef:
+                  name: config-pruebaswebapp
+                  key: CONFIGMAP
+            - name: SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: pruebaswebapp-secret
+                  key: SECRET
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+        - name: harbor-creds
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      # serviceAccount: Pedir esta cuenta de servicio para la APLICACION
+      serviceAccount: pruebaswebapp-sa
+  updateStrategy:
+    type: RollingUpdate

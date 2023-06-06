@@ -1,6 +1,6 @@
 # PruebasWebApp
 
-_Aplicacion Java mavenizada de pruebas para verificar el funcionamiento de CadenaUnica_
+_Aplicacion Java mavenizada de pruebas para verificar el funcionamiento de los procesos de integración continua_
 
 ## Comenzando 🚀
 

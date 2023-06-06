@@ -1,6 +1,8 @@
 FROM harbor.chie.junta-andalucia.es/imagenes-base/img-base-tomcat8:1.0.6.s09
+#FROM harbor.cica.junta-andalucia.es/imagenes-base/img-base-tomcat8:1.0.6.s09
+#FROM tomcat:8.5.79-jre8-openjdk-slim-buster
 
-##Copiar archivo con el war en webapps
+###Copiar archivo con el war en webapps
 COPY ./target/pruebasWebApp.war /opt/tomcat/webapps/
 
 ## JVM_OPTS

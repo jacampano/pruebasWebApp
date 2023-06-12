@@ -33,7 +33,7 @@ public class PruebasWebAppTest {
   @Before
   public void setUp() throws MalformedURLException {
     System.out.println("Iniciando setUp");
-    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.safari());
+    driver = new RemoteWebDriver(new URL("http://192.168.1.101:4444/wd/hub"), DesiredCapabilities.safari());
     //driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), DesiredCapabilities.chrome());
     
     /* 
@@ -67,7 +67,7 @@ public class PruebasWebAppTest {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10).getSeconds());
 
     while (continuar) {
-      driver.get("http://localhost:8080/pruebasWebApp/");
+      driver.get("http://192.168.1.101:8080/pruebasWebApp/");
       driver.manage().window().setSize(new Dimension(2880, 1325));  
       driver.findElement(By.id("nombre")).sendKeys("usuario");
       driver.findElement(By.id("contrasena")).sendKeys("password");

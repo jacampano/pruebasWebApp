@@ -33,9 +33,9 @@ public class PruebasWebAppTest {
   @Before
   public void setUp() throws MalformedURLException {
     System.out.println("Iniciando setUp");
-    //driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), DesiredCapabilities.safari());
-    //driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), DesiredCapabilities.chrome());
-    driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), DesiredCapabilities.firefox());
+    //driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.safari());
+    //driver = new RemoteWebDriver(new URL("http://lab.zalenium:4444/wd/hub"), DesiredCapabilities.chrome());
+    driver = new RemoteWebDriver(new URL("http://lab.zalenium:4444/wd/hub"), DesiredCapabilities.firefox());
     
     /* 
     System.setProperty("webdriver.chrome.whitelistedIps", "");
@@ -47,7 +47,7 @@ public class PruebasWebAppTest {
     options.addArguments("--disable-ipv6");
     options.addArguments("--whitelisted-ips=''");
     options.setCapability("networkConnectionEnabled", true);
-    driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), options);
+    driver = new RemoteWebDriver(new URL("http://lab.zalenium:4444/wd/hub"), options);
     */
   
     js = (JavascriptExecutor) driver;
@@ -68,7 +68,7 @@ public class PruebasWebAppTest {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10).getSeconds());
 
     while (continuar) {
-      driver.get("http://192.168.1.101:8080/pruebasWebApp/");
+      driver.get("http://lab.tomcat:8080/pruebasWebApp/");
       driver.manage().window().setSize(new Dimension(2880, 1325));  
       driver.findElement(By.id("nombre")).sendKeys("usuario");
       driver.findElement(By.id("contrasena")).sendKeys("password");

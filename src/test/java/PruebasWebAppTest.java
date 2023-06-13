@@ -33,8 +33,9 @@ public class PruebasWebAppTest {
   @Before
   public void setUp() throws MalformedURLException {
     System.out.println("Iniciando setUp");
-    driver = new RemoteWebDriver(new URL("http://192.168.1.101:4444/wd/hub"), DesiredCapabilities.safari());
+    //driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), DesiredCapabilities.safari());
     //driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), DesiredCapabilities.chrome());
+    driver = new RemoteWebDriver(new URL("http://192.168.1.57:4444/wd/hub"), DesiredCapabilities.firefox());
     
     /* 
     System.setProperty("webdriver.chrome.whitelistedIps", "");
@@ -83,7 +84,7 @@ public class PruebasWebAppTest {
   
 
 
-      if (contador == 9) {
+      if (contador == 19) {
         continuar = false;  // Detener el bucle después de 10 iteraciones
       }
       contador++;

@@ -1,6 +1,0 @@
-projectKey=es.curso.pruebaswebapp
-serverUrl=http://lab.sonar:9000
-serverVersion=9.7.1.62043
-dashboardUrl=http://lab.sonar:9000/dashboard?id=es.curso.pruebaswebapp
-ceTaskId=AYkIVnTd_X1konCj0rHD
-ceTaskUrl=http://lab.sonar:9000/api/ce/task?id=AYkIVnTd_X1konCj0rHD

@@ -1,0 +1,41 @@
+Plugins:
+Bundled analyzers:
+  - Python Code Quality and Security 3.19.0.10254 (python)
+  - Go Code Quality and Security 1.11.0.3905 (go)
+  - JaCoCo 1.1.1.1157 (jacoco)
+  - Kotlin Code Quality and Security 2.10.0.1456 (kotlin)
+  - IaC Code Quality and Security 1.9.2.2279 (iac)
+  - JavaScript/TypeScript/CSS Code Quality and Security 9.9.0.19492 (javascript)
+  - Ruby Code Quality and Security 1.11.0.3905 (ruby)
+  - Scala Code Quality and Security 1.11.0.3905 (sonarscala)
+  - C# Code Quality and Security 8.46.0.54807 (csharp)
+  - Java Code Quality and Security 7.14.0.30229 (java)
+  - HTML Code Quality and Security 3.6.0.3106 (web)
+  - Flex Code Quality and Security 2.7.0.2865 (flex)
+  - XML Code Quality and Security 2.6.1.3686 (xml)
+  - PHP Code Quality and Security 3.25.0.9077 (php)
+  - Text file Code Quality and Security 1.1.0.282 (text)
+  - VB.NET Code Quality and Security 8.46.0.54807 (vbnet)
+  - Configuration detection fot Code Quality and Security 1.2.0.267 (config)
+Global server settings:
+  - email.from=sonar@lab.sonar
+  - sonar.core.id=147B411E-AYiPc8r3dv4wYePJtU3j
+  - sonar.core.serverBaseURL=http://lab.sonar:9000
+  - sonar.core.startTime=2023-06-29T18:02:54+0000
+  - sonar.forceAuthentication=true
+Project server settings:
+Project scanner properties:
+  - sonar.host.url=http://lab.sonar:9000/
+  - sonar.java.binaries=target/**
+  - sonar.junit.reportsPath=reports/java/surefire-reports
+  - sonar.login=******
+  - sonar.projectBaseDir=/Users/jacampano/sandbox/recursosCursoJenkins/pruebasWebApp
+  - sonar.projectKey=es.curso.pruebaswebapp
+  - sonar.projectName=pruebasWebApp
+  - sonar.scanner.app=ScannerCLI
+  - sonar.scanner.appVersion=4.8.0.2856
+  - sonar.sourceEncoding=UTF-8
+  - sonar.sources=src/main/webapp
+  - sonar.test=src/test/java
+  - sonar.verbose=true
+  - sonar.working.directory=/Users/jacampano/sandbox/recursosCursoJenkins/pruebasWebApp/.scannerwork

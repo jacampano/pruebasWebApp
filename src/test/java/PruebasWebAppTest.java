@@ -35,7 +35,7 @@ public class PruebasWebAppTest {
     System.out.println("Iniciando setUp");
     //driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.safari());
     //driver = new RemoteWebDriver(new URL("http://lab.zalenium:4444/wd/hub"), DesiredCapabilities.chrome());
-    driver = new RemoteWebDriver(new URL("http://lab.zalenium:4444/wd/hub"), DesiredCapabilities.firefox());
+    driver = new RemoteWebDriver(new URL("http://lab.zalenium:4444/wd/hub"), DesiredCapabilities.chrome());
     
     /* 
     System.setProperty("webdriver.chrome.whitelistedIps", "");

@@ -43,7 +43,7 @@
         var2 ="No se ha encontrado variable SECRET" ;
     }
     
-    String pomPropertiesPath = pageContext.getServletContext().getRealPath("/META-INF/maven/es.juntadeandalucia/pruebaswebapp/pom.properties");
+    String pomPropertiesPath = pageContext.getServletContext().getRealPath("/META-INF/maven/es.jacampano.curso/pruebaswebapp/pom.properties");
     String version = PomPropertiesReader.getVersion(pomPropertiesPath);
 %>
 <!-- Comentario para que SonarQube no falle -->

@@ -14,7 +14,7 @@ public class PomPropertiesReaderTest {
     @Test
     public void testGetVersion() {
         String pomPropertiesContent = "#Created by Apache Maven 3.6.3\n" +
-                "groupId=es.juntadeandalucia\n" +
+                "groupId=es.jacampano.curso\n" +
                 "artifactId=pruebaswebapp\n" +
                 "version=0.0.11-SNAPSHOT\n";
 
@@ -40,7 +40,7 @@ public class PomPropertiesReaderTest {
     @Test
     public void testGetVersionFail() {
         String pomPropertiesContent = "#Created by Apache Maven 3.6.3\n" +
-                "groupId=es.juntadeandalucia\n" +
+                "groupId=es.jacampano.curso\n" +
                 "artifactId=pruebaswebapp\n" +
                 "version=0.0.11-SNAPSHOT\n";
 

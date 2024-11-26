@@ -4,7 +4,8 @@
 <%@ page import="java.io.FileReader" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.util.Properties" %>
-<%@ page import="es.juntadeandalucia.devsecops.*" %>
+<%@ page import="es.jacampano.curso.*" %>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
 <link href="https://cdn.datatables.net/v/dt/dt-2.0.5/datatables.min.css" rel="stylesheet">
 <script src="https://cdn.datatables.net/v/dt/dt-2.0.5/datatables.min.js" integrity="sha384-XF3Rp9av2UCgM3eD8xGPkc0yW445qxJMEGUBLYjWptDSrwEjFqEP+p/BVB2Feg2i" crossorigin="anonymous"></script>

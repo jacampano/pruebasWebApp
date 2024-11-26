@@ -1,7 +1,7 @@
-package es.juntadeandalucia.devsecops;
+package es.jacampano.curso;
 import org.junit.jupiter.api.Test;
 
-import es.juntadeandalucia.devsecops.PomPropertiesReader;
+import es.jacampano.curso.PomPropertiesReader;
 
 import java.io.File;
 import java.io.FileWriter;

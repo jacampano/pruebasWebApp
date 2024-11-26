@@ -1,4 +1,4 @@
-package es.juntadeandalucia.devsecops;
+package es.jacampano.curso;
 
 public class OperacionesAritmeticas {
     public static int suma(int a, int b){

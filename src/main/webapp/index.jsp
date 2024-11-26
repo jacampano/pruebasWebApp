@@ -1,4 +1,5 @@
-<%@ page import="java.lang.*,java.util.Map"%>
+<%@ page import="java.lang.System"%>
+<%@ page import="java.util.Map"%>
 <%@ page import="java.io.BufferedReader" %>
 <%@ page import="java.io.File" %>
 <%@ page import="java.io.FileReader" %>

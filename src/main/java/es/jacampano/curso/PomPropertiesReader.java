@@ -1,4 +1,4 @@
-package es.juntadeandalucia.devsecops;
+package es.jacampano.curso;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;

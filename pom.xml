@@ -6,7 +6,7 @@
 
     <groupId>es.jacampano.curso</groupId>
     <artifactId>pruebaswebapp</artifactId>
-    <version>1.0.0</version>
+    <version>1.2.3</version>
     <packaging>war</packaging>
 
     <name>pruebasWebApp Maven Webapp pruebasWebApp</name>

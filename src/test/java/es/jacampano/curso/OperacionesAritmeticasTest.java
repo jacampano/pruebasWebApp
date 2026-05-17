@@ -1,7 +1,7 @@
 package es.jacampano.curso;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class OperacionesAritmeticasTest {
 

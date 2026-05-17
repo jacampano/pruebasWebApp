@@ -1,6 +1,24 @@
 # PruebasWebApp
 
-_Aplicacion Java mavenizada de pruebas para verificar el funcionamiento de los procesos de integración continua_
+_Aplicacion Java mavenizada de pruebas para cursos de Jenkins y SonarQube._
+
+## Objetivo didactico
+
+Este proyecto contiene una aplicacion web sencilla y varias clases Java de ejemplo. La logica nueva simula un carrito de la compra y esta preparada para explicar en clase:
+
+* Code smells habituales: constantes magicas, comparacion de `String` con `==`, bloques complejos, `System.out`, variables sin uso y comentarios heredados.
+* Bugs potenciales: acceso a metodos sobre valores que pueden ser `null`.
+* Security hotspots: credenciales simuladas en codigo.
+* Duplicidades: `calcularPrecioClienteOro` y `calcularPrecioClientePlatino` contienen bloques casi identicos.
+* Cobertura de tests: JaCoCo genera `target/site/jacoco/jacoco.xml` para SonarQube.
+
+Para ejecutar los unitarios y generar cobertura:
+
+```
+mvn clean test
+```
+
+La prueba Selenium queda marcada con `@Ignore` porque depende del entorno de laboratorio `lab.zalenium` y `lab.tomcat`.
 
 ## Comenzando 🚀
 
@@ -88,7 +106,6 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
-
 
 
 

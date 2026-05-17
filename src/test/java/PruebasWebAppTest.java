@@ -2,6 +2,7 @@
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
+import org.junit.Ignore;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
@@ -58,6 +59,7 @@ public class PruebasWebAppTest {
     driver.quit();
   }
   @Test
+  @Ignore("Prueba end-to-end para entorno de laboratorio con Selenium/Zalenium")
   public void pruebasWebApp() {
     System.out.println("Iniciando prueba");
 
